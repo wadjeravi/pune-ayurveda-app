@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { Stack, useRouter } from 'expo-router';
 
 import { COLORS, icons, images, SIZES } from '../constants';
-import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from '../components'
+import { Nearbyjobs, FavouritePicks,Popularjobs, ScreenHeaderBtn, Welcome } from '../components'
+// import FavouritePicks from '../components/home/favourite/FavouritePicks';
 
 
 const Home = () => {
@@ -28,6 +29,7 @@ const Home = () => {
       <View style={{ flex:1, padding: SIZES.medium}}>
         <Welcome></Welcome>
         <Popularjobs></Popularjobs>
+        <FavouritePicks></FavouritePicks>
         <Nearbyjobs />
       </View>
 
