@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center",
+    // alignItems: "center",
   },
   headerTitle: {
     fontSize: SIZES.large,
@@ -24,29 +24,8 @@ const styles = StyleSheet.create({
   cardsContainer: {
     padding:10,
     marginTop: SIZES.medium,
-    backgroundColor:'lightyellow'
-  },
-  addButton: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    borderRadius:10,
-    borderColor:'red',
-    borderWidth:1,
-    backgroundColor: 'white', 
-    padding: 5, 
-  },
-  pricesView:{
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-  },
-  favouritePrices:{
-    color:'black'
-  },
-  addButtonText: {
-    color: 'red', 
-  },
+    backgroundColor:'white'
+  }
 });
 
 export default styles;
