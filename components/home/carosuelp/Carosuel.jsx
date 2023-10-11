@@ -7,20 +7,24 @@ const Carousel = () => {
     "https://www.unitedayurveda.in/wp-content/uploads/2022/10/banner1-1.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1geB-fp8l5IlOheox0PEB4K4DOqupOA0ysA&usqp=CAU",
     "https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2019/09/06/Pictures/ayurveda_80d7f144-d08d-11e9-a264-bc92e50e5c68.jpg"
-    
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  let flatListRef = useRef(null);
+  let swiperRef = useRef(null);
 
-  const scrollToIndex = (_,index) => {
-    flatListRef.current?.scrollToIndex({ animated: true, index: index });
+  const scrollToIndex = (index) => {
     setCurrentIndex(index);
+    swiperRef.current?.scrollTo(index);
   };
 
   return (
     <View style={styles.container}>
-      <Swiper style={styles.slider}  showsPagination={false}>
+      <Swiper
+        ref={swiperRef}
+        style={styles.slider}
+        showsPagination={false}
+        onIndexChanged={(index) => setCurrentIndex(index)} 
+      >
         {images.map((_, index) => (
           <View style={styles.slide} key={index}>
             <Image style={styles.image} source={{ uri: images[index] }} />
@@ -52,7 +56,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   slider: {
-    height: height * 0.7,
+    height: 500,
   },
   slide: {
     flex: 1,
@@ -60,21 +64,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: width,
+    width: 320,
     height: 150,
-    resizeMode:'cover',
-    marginVertical: 100,
-    marginTop:20,
-    padding:60,
-    borderRadius:50,
+    resizeMode: 'cover',
+    marginVertical: 10,
+    marginTop: 20,
+    padding: 60,
+    borderRadius: 30,
   },
   dotView: {
-
     flexDirection: 'row',
     justifyContent: 'center',
     marginVertical: 20,
-    marginTop:-320,
-
+    marginTop: -320,
   },
   circle: {
     width: 10,
