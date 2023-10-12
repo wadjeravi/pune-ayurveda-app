@@ -4,7 +4,7 @@ import { COLORS, FONT, SHADOWS, SIZES } from "../../../../constants";
 
 const styles = StyleSheet.create({
   container: (selectedJob, item) => ({
-    width: 150,
+    width: 250,
     padding: SIZES.xLarge,
     backgroundColor: 'white',
     borderRadius: SIZES.medium,
@@ -17,24 +17,53 @@ const styles = StyleSheet.create({
   }),
   addButton: {
     position: 'absolute',
+    justifyContent:"center",
+    alignItems:"center",
     bottom: 5,
     right: 5,
-    borderRadius:10,
+    borderRadius:8,
     borderColor:'red',
     borderWidth:1,
     backgroundColor: 'white', 
-    padding: 5, 
+    padding: 10, 
+    width:80,
+    height:40
   },
-  pricesView:{
+  originalPriceView:{
+    position: 'absolute',
+    bottom: 20,
+    left: 5,
+  },
+  discountPriceView:{
     position: 'absolute',
     bottom: 5,
     left: 5,
   },
-  favouritePrices:{
-    color:'black'
+  originalPrices:{
+    color:'black',
+    textDecorationLine:'line-through'
+  },
+  discountPrices:{
+    color:'black',
   },
   addButtonText: {
     color: 'red', 
+    fontWeight:'bold',
+    fontSize:15
+  },
+  discountView: {
+    backgroundColor: 'purple',
+    padding: 2,
+    borderTopLeftRadius: SIZES.medium,
+    borderBottomRightRadius:10,
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    position: 'absolute',
+    top: 0, 
+    left: 0,
+  },
+  discountText: {
+    color: 'white',
   },
 });
 
