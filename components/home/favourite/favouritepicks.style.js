@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
-    // alignItems: "center",
+    alignItems: "center",
   },
   headerTitle: {
     fontSize: SIZES.large,

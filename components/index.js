@@ -6,7 +6,7 @@ import Carousel from "./home/carosuelp/Carosuel"
 import Nearbyjobs from "./home/nearby/Nearbyjobs";
 import Popularjobs from "./home/popular/Popularjobs";
 import FavouritePicks from "./home/favourite/FavouritePicks";
-
+import Categories from "./home/categories/Categories";
 
 // job details screen
 import Company from "./jobdetails/company/Company";
@@ -24,6 +24,7 @@ export {
   Carousel,
   Nearbyjobs,
   Popularjobs,
+  Categories,
   FavouritePicks,
   Company,
   JobTabs,
