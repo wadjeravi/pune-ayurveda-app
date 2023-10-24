@@ -2,8 +2,9 @@ import React from 'react';
 import { View, StyleSheet ,Text,Image} from 'react-native';
 //import {  colors } from '../../../constants'
 import Swiper from 'react-native-swiper'
+//import { Carouselp} from '../../home/carosuelp/Carosuel.style.js';
 
-const OfferSlider = () => {
+const offerSlider = () => {
     return (
         <View>
             <View style={styles.offerSlider}>
@@ -24,7 +25,8 @@ const OfferSlider = () => {
         </View>
     )
 }
-export default OfferSlider
+export default offerSlider
+
 const styles = StyleSheet.create({
     offerSlider: {
         width: '90',
@@ -48,6 +50,8 @@ const styles = StyleSheet.create({
         resizeMode:'cover',
         padding:50,
         marginBottom:35,
+        // marginLeft:50,
+        // marginRight:50,
     },
 
     dot: {
@@ -66,6 +70,48 @@ const styles = StyleSheet.create({
     },
 })
 
+/************************************************************ */
+
+
+
+// import React from 'react';
+// import { View, Image } from 'react-native';
+// import Swiper from 'react-native-swiper';
+// import styles from './Carosuel.style.js'; // Import your styles
+
+// const OfferSlider = () => {
+//     return (
+//         <View>
+//             <View style={styles.offerSlider}>
+//                 <Swiper
+//                     autoplay={true}
+//                     autoplayTimeout={5}
+//                     showsButtons={false}
+//                     dotColor="grey"
+//                     activeDotColor="black"
+//                 >
+//                     <View style={styles.slide}>
+//                         <Image source={require('../../../assets/images/slider1.jpg')} style={styles.image} />
+//                     </View>
+//                     <View style={styles.slide}>
+//                         <Image source={require('../../../assets/images/slider2.jpg')} style={styles.image} />
+//                     </View>
+//                     <View style={styles.slide}>
+//                         <Image source={require('../../../assets/images/slider3.jpg')} style={styles.image} />
+//                     </View>
+//                 </Swiper>
+//             </View>
+//         </View>
+//     );
+// };
+// export default OfferSlider;
+
+
+
+
+
+
+   
 
 
 
