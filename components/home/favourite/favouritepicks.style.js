@@ -22,8 +22,10 @@ const styles = StyleSheet.create({
     color: COLORS.gray,
   },
   cardsContainer: {
+    padding:10,
     marginTop: SIZES.medium,
-  },
+    backgroundColor:'white'
+  }
 });
 
 export default styles;

@@ -9,8 +9,11 @@ const styles = StyleSheet.create({
     backgroundColor: selectedJob === item.job_id ? COLORS.primary : "#FFF",
     borderRadius: SIZES.medium,
     justifyContent: "space-between",
-    ...SHADOWS.medium,
-    shadowColor: COLORS.white,
+    elevation: 5, // Add elevation for shadow
+    shadowColor: 'black', // Color of the shadow
+    shadowOffset: { width: 0, height: 2 }, // Offset of the shadow
+    shadowOpacity: 0.3, // Opacity of the shadow
+    shadowRadius: 3, // Radius of the shadow
   }),
   logoContainer: (selectedJob, item) => ({
     width: 50,
